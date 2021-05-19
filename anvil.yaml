@@ -1,8 +1,34 @@
-allow_embedding: false
+services:
+- source: /runtime/services/tables.yml
+  client_config: {}
+  server_config: {auto_create_missing_columns: false}
+- source: /runtime/services/anvil/users.yml
+  client_config: {allow_signup: true, enable_automatically: true, use_email: true,
+    confirm_email: true}
+  server_config: {user_table: users}
+startup: {type: form, module: RolePage}
 package_name: Student_Loan_System
-db_schema: []
+allow_embedding: false
 name: Student Loan System
-startup_form: Form1
-renamed: true
 runtime_options: {version: 2, client_version: '3', server_version: python3-sandbox}
-services: []
+metadata: {}
+db_schema:
+- name: Users
+  id: 128356
+  python_name: users
+  columns:
+    6ML1hhk3y0w=:
+      name: email
+      type: string
+      admin_ui: {order: 0, width: 200}
+    jMzCZScJGBk=:
+      name: User Type
+      type: string
+      admin_ui: {order: 2, width: 200}
+    z+1xkN_Hz54=:
+      name: enabled
+      type: bool
+      admin_ui: {order: 1, width: 100}
+  access: {python_name: users, app_id: CMIGL73IMJFV7MRA, server: full, client: none,
+    table_mapping_name: null, table_mapping_id: null, table_id: 128356}
+renamed: true
