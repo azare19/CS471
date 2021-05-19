@@ -3,15 +3,17 @@ services:
   client_config: {}
   server_config: {auto_create_missing_columns: false}
 - source: /runtime/services/anvil/users.yml
-  client_config: {allow_signup: true, enable_automatically: true, use_email: true,
+  client_config: {allow_signup: false, enable_automatically: true, use_email: true,
     confirm_email: true}
   server_config: {user_table: users}
-startup: {type: form, module: RolePage}
+startup: {type: form, module: Authentication}
 package_name: Student_Loan_System
 allow_embedding: false
 name: Student Loan System
 runtime_options: {version: 2, client_version: '3', server_version: python3-sandbox}
 metadata: {}
+startup_form: Authentication
+native_deps: {head_html: ''}
 db_schema:
 - name: Users
   id: 128356
@@ -21,6 +23,14 @@ db_schema:
       name: email
       type: string
       admin_ui: {order: 0, width: 200}
+    8f_atkiSmhE=:
+      name: name
+      type: string
+      admin_ui: {order: 4, width: 200}
+    9MScefwPgek=:
+      name: password_hash
+      type: string
+      admin_ui: {order: 3, width: 200}
     jMzCZScJGBk=:
       name: User Type
       type: string
