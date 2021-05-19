@@ -9,13 +9,13 @@ services:
   client_config: {allow_signup: false, enable_automatically: true, use_email: true,
     confirm_email: true}
   server_config: {user_table: users}
-startup: {type: form, module: Authentication}
+startup: {type: form, module: sign_up}
 package_name: Student_Loan_System
 allow_embedding: false
 name: Student Loan System
 runtime_options: {version: 2, client_version: '3', server_version: python3-sandbox}
 metadata: {}
-startup_form: Authentication
+startup_form: sign_up
 native_deps: {head_html: ''}
 db_schema:
 - name: Users
@@ -35,7 +35,7 @@ db_schema:
       type: string
       admin_ui: {order: 3, width: 200}
     jMzCZScJGBk=:
-      name: User Type
+      name: user_type
       type: string
       admin_ui: {order: 2, width: 200}
     z+1xkN_Hz54=:
