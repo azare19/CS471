@@ -15,6 +15,22 @@ components:
   components:
   - type: Label
     properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
+      visible: true, text: Full Name, font_size: null, font: '', spacing_above: small,
+      icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
+      underline: false, icon: ''}
+    name: full_name_label
+    layout_properties: {grid_position: 'YTQKYM,EDNWIX'}
+    event_bindings: {}
+  - type: TextBox
+    properties: {role: null, align: left, hide_text: false, tooltip: '', placeholder: First name Last name,
+      border: '', enabled: true, foreground: '', visible: true, text: '', font_size: null,
+      font: '', spacing_above: small, type: text, spacing_below: small, italic: false,
+      background: '', bold: false, underline: false}
+    name: full_name_textbox
+    layout_properties: {grid_position: 'YTQKYM,DJTLVQ'}
+    event_bindings: {}
+  - type: Label
+    properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
       visible: true, text: Email, font_size: null, font: '', spacing_above: small,
       icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
       underline: false, icon: ''}
@@ -38,11 +54,12 @@ components:
     layout_properties: {grid_position: 'QMKBAN,NQJKMS'}
   - type: TextBox
     properties: {role: null, align: left, hide_text: true, tooltip: '', placeholder: password,
-      border: '', enabled: true, foreground: '', visible: true, text: '', font_size: null,
-      font: '', spacing_above: small, type: text, spacing_below: small, italic: false,
-      background: '', bold: false, underline: false}
+      border: 'style={border-color: #92a8d1;}', enabled: true, foreground: '', visible: true,
+      text: '', font_size: null, font: '', spacing_above: small, type: text, spacing_below: small,
+      italic: false, background: '', bold: false, underline: false}
     name: password_textbox
     layout_properties: {grid_position: 'QMKBAN,UTCJES'}
+    event_bindings: {}
   - type: Label
     properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
       visible: true, text: Repeat Password, font_size: null, font: '', spacing_above: small,
@@ -88,13 +105,20 @@ components:
     layout_properties: {grid_position: 'MFUZHV,SZEPDX'}
     data_bindings: []
     event_bindings: {change: user_role_drop_down_change}
+  - type: Label
+    properties: {role: null, align: left, tooltip: '', border: '', foreground: '#FF0000',
+      visible: true, text: '', font_size: null, font: '', spacing_above: small, icon_align: left,
+      spacing_below: small, italic: false, background: '', bold: false, underline: false,
+      icon: ''}
+    name: error_label
+    layout_properties: {grid_position: 'GZCEUC,UYSFZS'}
   - type: Button
     properties: {role: secondary-color, align: center, tooltip: '', border: '', enabled: true,
       foreground: '', visible: true, text: Create a new account, font_size: null,
       font: '', spacing_above: small, icon_align: left, spacing_below: small, italic: false,
       background: '', bold: false, underline: false, icon: ''}
     name: sign_up_btn
-    layout_properties: {grid_position: 'ZHABAI,NLXRXU'}
+    layout_properties: {grid_position: 'GKHWKI,HNODCN'}
     event_bindings: {click: create_account_btn_click}
 - type: FlowPanel
   properties: {}

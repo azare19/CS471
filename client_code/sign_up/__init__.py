@@ -5,7 +5,6 @@ import anvil.users
 import anvil.tables as tables
 import anvil.tables.query as q
 from anvil.tables import app_tables
-import custom_signup.login_flow
 
 class sign_up(sign_upTemplate):
   def __init__(self, **properties):
@@ -15,12 +14,14 @@ class sign_up(sign_upTemplate):
     # Any code you write here will run when the form opens.
 
   def create_account_btn_click(self, **event_args):
-    custom_signup.login_flow.signup_with_form()
-    self.update_login_status()
-
-  def user_role_drop_down_change(self, **event_args):
-    """This method is called when an item is selected"""
-    pass
+    if self.password_textbox.text != self.repeat_password_textbox.text:
+      self.error_label.text = "Please make sure that the passwords are same!"
+      self.password_textbox.border = "#FF0000"
+    else:
+      resp = anvil.server.call('_do_signup', self.email_textbox.text, 
+                                              self.full_name_textbox.text, 
+                                              self.password_textbox.text, 
+                                              self.user_role_drop_down.selected_value)
 
 
 

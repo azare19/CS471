@@ -1,6 +1,4 @@
-dependencies:
-- app_id: 5W63244P65HQMVGO
-  version: {dev: false}
+dependencies: []
 services:
 - source: /runtime/services/tables.yml
   client_config: {}
@@ -32,27 +30,27 @@ db_schema:
     8f_atkiSmhE=:
       name: name
       type: string
-      admin_ui: {order: 4, width: 200}
+      admin_ui: {order: -1, width: 200}
     9MScefwPgek=:
       name: password_hash
       type: string
       admin_ui: {order: 3, width: 200}
-    cK004ffFxwg=:
-      name: confirmed_email
-      type: bool
+    JbvPMJrdWz0=:
+      name: link_key
+      type: string
+      admin_ui: {order: 6, width: 200}
+    cK12x4E+aWg=:
+      name: email_confirmed
+      type: string
       admin_ui: {order: 5, width: 200}
     jMzCZScJGBk=:
       name: user_type
       type: string
-      admin_ui: {order: 2, width: 200}
-    yLTKmOilL2k=:
-      name: link_key
-      type: string
-      admin_ui: {order: 6, width: 200}
+      admin_ui: {order: -0.5, width: 200}
     z+1xkN_Hz54=:
       name: enabled
       type: bool
-      admin_ui: {order: 1, width: 100}
+      admin_ui: {order: 4, width: 100}
   access: {python_name: users, app_id: CMIGL73IMJFV7MRA, server: full, client: none,
     table_mapping_name: null, table_mapping_id: null, table_id: 128356}
 renamed: true
