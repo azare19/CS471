@@ -37,10 +37,18 @@ db_schema:
       name: password_hash
       type: string
       admin_ui: {order: 3, width: 200}
+    cK004ffFxwg=:
+      name: confirmed_email
+      type: bool
+      admin_ui: {order: 5, width: 200}
     jMzCZScJGBk=:
       name: user_type
       type: string
       admin_ui: {order: 2, width: 200}
+    yLTKmOilL2k=:
+      name: link_key
+      type: string
+      admin_ui: {order: 6, width: 200}
     z+1xkN_Hz54=:
       name: enabled
       type: bool
