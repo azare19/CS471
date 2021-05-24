@@ -3,6 +3,7 @@ container:
   type: HtmlTemplate
   properties: {tooltip: '', background: '', foreground: '', border: '', visible: true,
     role: null, html: '@theme:standard-page.html'}
+  event_bindings: {}
 components:
 - type: ColumnPanel
   properties: {role: null, tooltip: '', border: '', foreground: '', visible: true,
@@ -94,7 +95,7 @@ components:
       background: '', bold: false, underline: false, icon: ''}
     name: sign_up_btn
     layout_properties: {grid_position: 'ZHABAI,NLXRXU'}
-    event_bindings: {click: button_1_click}
+    event_bindings: {click: create_account_btn_click}
 - type: FlowPanel
   properties: {}
   name: navbar_links

@@ -23,4 +23,9 @@ class sign_up(sign_upTemplate):
     """This method is called when the button is clicked"""
     pass
 
+  def create_account_btn_click(self, **event_args):
+    custom_signup.login_flow.signup_with_form()
+    self.update_login_status()
+
+
 
