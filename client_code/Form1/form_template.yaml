@@ -1,0 +1,14 @@
+container:
+  type: HtmlTemplate
+  properties: {tooltip: '', background: '', foreground: '', border: '', visible: true,
+    role: null, html: "<!DOCTYPE html>\n<html>\n<head>\n<style>\ndiv {\n  background-image:\
+      \ url('_/theme/triangle.png');\n  background-repeat: no-repeat;\n  max-width:100%;\n\
+      \  max-height:100%;\n}\n</style>\n</head>\n<body>\n\n<h2>Background Image</h2>\n\
+      \n<div>\nYou can specify background images<br>\nfor any visible HTML element.<br>\n\
+      In this example, the background image<br>\nis specified for a div element.<br>\n\
+      By default, the background-image<br>\nwill repeat itself in the direction(s)<br>\n\
+      where it is smaller than the element<br>\nwhere it is specified. (Try resizing\
+      \ the<br>\nbrowser window to see how the<br>\nbackground image behaves.\n</div>\n\
+      \n</body>\n</html>\n"}
+components: []
+is_package: true
