@@ -21,7 +21,7 @@ class sign_up(sign_upTemplate):
     self.repeat_password_textbox.border = ""
     self.user_role_drop_down.border = ""
   
-  def display_error(self, resp):
+  def display_message(self, resp):
     if resp == -1:
       self.error_label.text = "Invalid Full Name, Try again."
       self.full_name_textbox.border = "solid #FF0000"
@@ -38,6 +38,10 @@ class sign_up(sign_upTemplate):
     elif resp == -5:
       self.error_label.text = "User Role not selected. Try again."
       self.user_role_drop_down.border = "solid #FF0000"
+    elif resp == -6:
+      self.error_label.text = "An account by this email already exists. Try again."
+    elif reps == 0:
+      self.error_label.text = f"We have sent a confirmation email to {self.email_textbox.text}.\n\nCheck your email, and click on the link."
 
 
   def create_account_btn_click(self, **event_args):
@@ -48,7 +52,7 @@ class sign_up(sign_upTemplate):
                                               self.user_role_drop_down.selected_value)
     self.clear_errors()
     if resp < 0:
-      self.display_error(resp)
+      self.display_message(resp)
             
 
 

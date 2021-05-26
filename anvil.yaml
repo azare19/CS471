@@ -9,7 +9,7 @@ services:
   server_config: {user_table: users}
 - source: /runtime/services/anvil/email.yml
   client_config: {}
-  server_config: {}
+  server_config: {custom_smtp: true, smtp_encryption: ssl}
 startup: {type: form, module: sign_up}
 package_name: Student_Loan_System
 allow_embedding: false
@@ -42,11 +42,11 @@ db_schema:
     jMzCZScJGBk=:
       name: user_type
       type: string
-      admin_ui: {order: 3.5, width: 200}
+      admin_ui: {order: -2, width: 200}
     jvnPNgTlPDk=:
-      name: email_confirmed
+      name: confirmed_email
       type: bool
-      admin_ui: {order: 5, width: 200}
+      admin_ui: {order: 1.5, width: 200}
   access: {python_name: users, app_id: CMIGL73IMJFV7MRA, server: full, client: none,
     table_mapping_name: null, table_mapping_id: null, table_id: 128356}
 renamed: true
