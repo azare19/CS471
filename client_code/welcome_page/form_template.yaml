@@ -1,0 +1,11 @@
+container:
+  type: HtmlTemplate
+  properties: {tooltip: '', background: '', foreground: '', border: '', visible: true,
+    role: null, html: "<!DOCTYPE html>\n<html>\n    <head>\n        <style>\n    \
+      \        html, body {\n                width: 100%;\n                height:\
+      \ 100%;\n                margin: 0;\n                padding: 0;\n         \
+      \       background-image: url('_/theme/harold.jpg');\n                background-size:\
+      \ cover;\n            }\n        </style>\n    </head>\n    <body>\n    </body>\n\
+      </html>"}
+components: []
+is_package: true
