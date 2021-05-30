@@ -31,4 +31,7 @@ class SignUpDialog(SignUpDialogTemplate):
     """Focus on the Account type drop down."""
     self.account_type_dd.focus()
     
+  def set_message_box_text(self, text):
+    """Set the message box text"""
+    self.message_bx.text = text
   

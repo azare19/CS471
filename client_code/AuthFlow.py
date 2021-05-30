@@ -23,7 +23,10 @@ def display_message(resp, dlg):
       dlg.message_bx.text = "An account by this email already exists. Try again."
 
 def signup_with_form():
+  print("dfs")
   dlg = SignUpDialog()
+  dlg.set_message_box_text("asdhadhas")
+  print(dlg.message_bx.text)
   while True:
     if not alert(dlg, title="Sign Up", large=True, buttons=[("Sign Up", True, 'primary'), ("Cancel", False)]):
       # If user clicked the cancel btn
@@ -33,7 +36,7 @@ def signup_with_form():
                                               dlg.password_txtbx.text, 
                                               dlg.repeat_password_txtbx.text,
                                               dlg.account_type_dd.selected_value)
-    dlg.message_bx.text  = "dodo"
+    dlg.set_message_box_text("asdhadhas")
     dlg.message_bx.visible = True
     continue
     if resp < 0:

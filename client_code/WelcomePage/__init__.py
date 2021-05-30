@@ -16,6 +16,7 @@ class WelcomePage(WelcomePageTemplate):
 
   def sign_up_btn_click(self, **event_args):
     AuthFlow.signup_with_form()
+    print("ol")
     pass
 
 
