@@ -5,16 +5,107 @@ container:
       \        html, body {\n                width: 100%;\n                height:\
       \ 100%;\n                margin: 0;\n                padding: 0;\n         \
       \       background-image: url('_/theme/harold.jpg');\n                background-size:\
-      \ cover;\n            }\n        </style>\n    </head>\n    <body>\n    </body>\n\
-      </html>"}
-  event_bindings: {}
+      \ cover;\n                overflow: hidden;\n            }\n            .titlebar\
+      \ {\n  \t\t\t\toverflow: hidden;\n  \t\t\t\tbackground-color: #F9A825;\n  \t\
+      \t\t\tpadding: 14px 16px;\n  \t\t\t\tfont-size: 18px;\n              \tfont-weight:\
+      \ bold;\n\t\t\t}\n            \n        </style>\n    </head>\n    <body>\n\
+      \      <div class=\"titlebar\">\n  \t\tWelcome to University Loan Application\
+      \ Program\n\t  </div>\n    </body>\n</html>"}
+  event_bindings: {refreshing_data_bindings: form_refreshing_data_bindings}
 components:
-- type: RichText
-  properties: {role: null, align: left, tooltip: '', enable_slots: true, border: '',
-    foreground: '', visible: true, font_size: null, content: 'Welcome to ', font: '',
-    spacing_above: small, spacing_below: small, data: null, background: '#FBC02D',
-    format: markdown}
-  name: Title
+- type: Spacer
+  properties: {height: 87}
+  name: spacer_1
   layout_properties: {slot: default}
   event_bindings: {}
+- type: GridPanel
+  properties: {}
+  name: grid_panel_1
+  layout_properties: {slot: default}
+  event_bindings: {}
+  components:
+  - type: ColumnPanel
+    properties: {role: card, tooltip: '', border: '', foreground: '', visible: true,
+      wrap_on: never, col_spacing: medium, spacing_above: small, col_widths: '{}',
+      spacing_below: small, background: 'theme:Primary 700'}
+    name: column_panel_1
+    layout_properties: {row: DHEWNQ, width_xs: 3, col_xs: 1, width: 183}
+    components:
+    - type: ColumnPanel
+      properties: {role: null, tooltip: '', border: '', foreground: '', visible: true,
+        wrap_on: mobile, col_spacing: small, spacing_above: none, col_widths: '{}',
+        spacing_below: small, background: '#F9A825'}
+      name: card_3
+      layout_properties: {grid_position: 'KNMVVB,EWNKKE', full_width_row: true}
+      components:
+      - type: RichText
+        properties: {role: null, align: center, tooltip: '', enable_slots: true, border: '',
+          foreground: '', visible: true, font_size: 12, content: '##### **TO CONTINUE,
+            SIGN IN OR CREATE A NEW ACCOUNT**', font: '', spacing_above: small, spacing_below: small,
+          data: null, background: '', format: markdown}
+        name: rich_text_3
+        layout_properties: {grid_position: 'XTBJII,VQOIYP'}
+    - type: ColumnPanel
+      properties: {role: card, tooltip: '', border: '', foreground: '', visible: true,
+        wrap_on: mobile, col_spacing: medium, spacing_above: large, col_widths: '{}',
+        spacing_below: medium, background: ''}
+      name: card_1
+      layout_properties: {grid_position: 'KPLTPX,JSYUPB', full_width_row: false}
+      components:
+      - type: TextBox
+        properties: {role: null, align: left, hide_text: false, tooltip: '', placeholder: email,
+          border: '', enabled: true, foreground: '', visible: true, text: '', font_size: null,
+          font: '', spacing_above: none, type: text, spacing_below: none, italic: false,
+          background: 'theme:White', bold: false, underline: false}
+        name: email_textbox
+        layout_properties: {row: ATUTMI, width_xs: 3, col_xs: 2, width: 207, grid_position: 'JTJSSJ,WYRLYR'}
+        event_bindings: {}
+    - type: ColumnPanel
+      properties: {role: card, tooltip: '', border: '', foreground: '', visible: true,
+        wrap_on: mobile, col_spacing: medium, spacing_above: medium, col_widths: '',
+        spacing_below: large, background: ''}
+      name: card_2
+      layout_properties: {grid_position: 'OWCWOK,YSCZSS', full_width_row: false}
+      components:
+      - type: TextBox
+        properties: {role: null, align: left, hide_text: true, tooltip: '', placeholder: password,
+          border: '', enabled: true, foreground: '', visible: true, text: '', font_size: null,
+          font: '', spacing_above: none, type: text, spacing_below: none, italic: false,
+          background: 'theme:White', bold: false, underline: false}
+        name: password_textbox
+        layout_properties:
+          col_widths: {}
+          grid_position: FYANEK,CELUEX
+        event_bindings: {}
+    - type: RichText
+      properties: {role: null, align: left, tooltip: '', enable_slots: true, border: '',
+        foreground: '#FF0000', visible: true, font_size: null, content: '', font: '',
+        spacing_above: small, spacing_below: small, data: null, background: '', format: markdown}
+      name: rich_text_1
+      layout_properties: {grid_position: 'NDMQNX,SCZVSG'}
+      event_bindings: {}
+    - type: Button
+      properties: {role: secondary-color, align: full, tooltip: '', border: '', enabled: true,
+        foreground: '', visible: true, text: Sign in, font_size: null, font: '', spacing_above: small,
+        icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
+        underline: false, icon: ''}
+      name: sign_in_btn
+      layout_properties: {row: HIYEDR, width_xs: 3, col_xs: 2, width: 207, grid_position: 'DMMSGR,UTDBTJ'}
+      event_bindings: {}
+    - type: RichText
+      properties: {role: null, align: center, tooltip: '', enable_slots: true, border: '',
+        foreground: 'theme:White', visible: true, font_size: null, content: '####
+          OR', font: '', spacing_above: small, spacing_below: small, data: null, background: '',
+        format: markdown}
+      name: message_text_box
+      layout_properties: {grid_position: 'DBGSRW,VQXFAY'}
+    - type: Button
+      properties: {role: primary-color, align: full, tooltip: '', border: '', enabled: true,
+        foreground: '#000000', visible: true, text: sign up, font_size: null, font: '',
+        spacing_above: small, icon_align: left, spacing_below: small, italic: false,
+        background: '#F9A825', bold: false, underline: false, icon: ''}
+      name: sign_up_btn
+      layout_properties: {grid_position: 'YBOTKK,WOKFPL', full_width_row: false}
+      event_bindings: {}
+    data_bindings: []
 is_package: true
