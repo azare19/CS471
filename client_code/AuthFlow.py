@@ -9,5 +9,13 @@ from SignUpDialog import SignUpDialog
 
 def signup_with_form():
   dlg = SignUpDialog()
-  alert(dlg, title="Sign Up", large=True, buttons=[("Sign Up", True, 'primary'), ("Cancel", False)])
-  pass
+  
+  while True:
+    if not alert(dlg, title="Sign Up", large=True, buttons=[("Sign Up", True, 'primary'), ("Cancel", False)]):
+      # If user clicked the cancel btn
+      return
+    
+    
+  
+  
+  
