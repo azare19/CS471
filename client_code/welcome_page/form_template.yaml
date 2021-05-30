@@ -7,5 +7,6 @@ container:
       \       background-image: url('_/theme/harold.jpg');\n                background-size:\
       \ cover;\n            }\n        </style>\n    </head>\n    <body>\n    </body>\n\
       </html>"}
+  event_bindings: {}
 components: []
 is_package: true
