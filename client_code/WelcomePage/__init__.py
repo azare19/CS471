@@ -5,7 +5,7 @@ import anvil.users
 import anvil.tables as tables
 import anvil.tables.query as q
 from anvil.tables import app_tables
-from .. import AuthFlow
+from ..import AuthFlow
 
 class WelcomePage(WelcomePageTemplate):
   def __init__(self, **properties):

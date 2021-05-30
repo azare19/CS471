@@ -1,7 +1,9 @@
 container:
   type: ColumnPanel
   event_bindings: {}
-  properties: {col_widths: '{}'}
+  properties: {role: null, tooltip: '', border: '', foreground: '', visible: true,
+    wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '{}',
+    spacing_below: small, background: ''}
 components:
 - type: ColumnPanel
   properties: {col_widths: '{}'}
@@ -37,7 +39,10 @@ components:
     name: email_lbl
     layout_properties: {grid_position: 'TCYFQM,SRNPVV'}
   - type: TextBox
-    properties: {}
+    properties: {role: null, align: left, hide_text: false, tooltip: '', placeholder: Email,
+      border: '', enabled: true, foreground: '', visible: true, text: '', font_size: null,
+      font: '', spacing_above: small, type: text, spacing_below: small, italic: false,
+      background: '', bold: false, underline: false}
     name: email_txtbx
     layout_properties: {grid_position: 'TCYFQM,GZQZVM'}
 - type: ColumnPanel
@@ -53,7 +58,10 @@ components:
     name: password_lbl
     layout_properties: {grid_position: 'DZJCYQ,ZEFEPJ'}
   - type: TextBox
-    properties: {}
+    properties: {role: null, align: left, hide_text: true, tooltip: '', placeholder: Password,
+      border: '', enabled: true, foreground: '', visible: true, text: '', font_size: null,
+      font: '', spacing_above: small, type: text, spacing_below: small, italic: false,
+      background: '', bold: false, underline: false}
     name: password_txtbx
     layout_properties: {grid_position: 'DZJCYQ,IRCCUC'}
 - type: ColumnPanel
@@ -69,7 +77,10 @@ components:
     name: repeat_password_lbl
     layout_properties: {grid_position: 'QQZPYC,OBHILK'}
   - type: TextBox
-    properties: {}
+    properties: {role: null, align: left, hide_text: false, tooltip: '', placeholder: Repeat password,
+      border: '', enabled: true, foreground: '', visible: true, text: '', font_size: null,
+      font: '', spacing_above: small, type: text, spacing_below: small, italic: false,
+      background: '', bold: false, underline: false}
     name: repeat_password_txtbx
     layout_properties: {grid_position: 'QQZPYC,NQZNGH'}
 - type: ColumnPanel
@@ -104,6 +115,12 @@ components:
       bold: false
       underline: false
       include_placeholder: true
-    name: drop_down_1
+    name: account_type_dd
     layout_properties: {grid_position: 'UCVBGL,YJYZOZ'}
+- type: RichText
+  properties: {role: null, align: left, tooltip: '', enable_slots: true, border: '',
+    foreground: '#FF0000', visible: true, font_size: null, content: Dffdgdfgfd, font: '',
+    spacing_above: small, spacing_below: small, data: null, background: '', format: markdown}
+  name: message_bx
+  layout_properties: {grid_position: 'CJSZPT,NRXLZE'}
 is_package: true
