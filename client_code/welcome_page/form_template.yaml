@@ -8,5 +8,13 @@ container:
       \ cover;\n            }\n        </style>\n    </head>\n    <body>\n    </body>\n\
       </html>"}
   event_bindings: {}
-components: []
+components:
+- type: RichText
+  properties: {role: null, align: left, tooltip: '', enable_slots: true, border: '',
+    foreground: '', visible: true, font_size: null, content: 'Welcome to ', font: '',
+    spacing_above: small, spacing_below: small, data: null, background: '#FBC02D',
+    format: markdown}
+  name: Title
+  layout_properties: {slot: default}
+  event_bindings: {}
 is_package: true
