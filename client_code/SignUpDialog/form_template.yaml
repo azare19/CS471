@@ -1,0 +1,109 @@
+container:
+  type: ColumnPanel
+  event_bindings: {}
+  properties: {col_widths: '{}'}
+components:
+- type: ColumnPanel
+  properties: {col_widths: '{}'}
+  name: column_panel_1
+  layout_properties: {grid_position: 'IZMOQZ,HRDBYS'}
+  components:
+  - type: Label
+    properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
+      visible: true, text: Full Name, font_size: null, font: '', spacing_above: small,
+      icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
+      underline: false, icon: ''}
+    name: full_name_lbl
+    layout_properties: {grid_position: 'YPYXAD,KPKFOM'}
+    event_bindings: {}
+  - type: TextBox
+    properties: {role: null, align: left, hide_text: false, tooltip: '', placeholder: Firstname Lastname,
+      border: '', enabled: true, foreground: '', visible: true, text: '', font_size: null,
+      font: '', spacing_above: small, type: text, spacing_below: small, italic: false,
+      background: '', bold: false, underline: false}
+    name: full_name_txtbx
+    layout_properties: {grid_position: 'YPYXAD,MDDUTU'}
+    event_bindings: {}
+- type: ColumnPanel
+  properties: {col_widths: '{}'}
+  name: column_panel_2
+  layout_properties: {grid_position: 'UMELUL,CDIWHO'}
+  components:
+  - type: Label
+    properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
+      visible: true, text: Email, font_size: null, font: '', spacing_above: small,
+      icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
+      underline: false, icon: ''}
+    name: email_lbl
+    layout_properties: {grid_position: 'TCYFQM,SRNPVV'}
+  - type: TextBox
+    properties: {}
+    name: email_txtbx
+    layout_properties: {grid_position: 'TCYFQM,GZQZVM'}
+- type: ColumnPanel
+  properties: {col_widths: '{}'}
+  name: column_panel_3
+  layout_properties: {grid_position: 'XXBQMP,YGKMDR'}
+  components:
+  - type: Label
+    properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
+      visible: true, text: Password, font_size: null, font: '', spacing_above: small,
+      icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
+      underline: false, icon: ''}
+    name: password_lbl
+    layout_properties: {grid_position: 'DZJCYQ,ZEFEPJ'}
+  - type: TextBox
+    properties: {}
+    name: password_txtbx
+    layout_properties: {grid_position: 'DZJCYQ,IRCCUC'}
+- type: ColumnPanel
+  properties: {col_widths: '{}'}
+  name: column_panel_4
+  layout_properties: {grid_position: 'XLLXMY,KXBLAK'}
+  components:
+  - type: Label
+    properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
+      visible: true, text: Re-enter Password, font_size: null, font: '', spacing_above: small,
+      icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
+      underline: false, icon: ''}
+    name: repeat_password_lbl
+    layout_properties: {grid_position: 'QQZPYC,OBHILK'}
+  - type: TextBox
+    properties: {}
+    name: repeat_password_txtbx
+    layout_properties: {grid_position: 'QQZPYC,NQZNGH'}
+- type: ColumnPanel
+  properties: {col_widths: '{}'}
+  name: column_panel_5
+  layout_properties: {grid_position: 'HLIPBH,BUEQIM'}
+  components:
+  - type: Label
+    properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
+      visible: true, text: Account Type, font_size: null, font: '', spacing_above: small,
+      icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
+      underline: false, icon: ''}
+    name: account_type_lbl
+    layout_properties: {grid_position: 'UCVBGL,HEVYBI'}
+  - type: DropDown
+    properties:
+      role: null
+      align: full
+      tooltip: ''
+      placeholder: Select Account Type
+      border: ''
+      enabled: true
+      foreground: ''
+      items: [Student, Registrar, Loan Officer]
+      visible: true
+      font_size: null
+      font: ''
+      spacing_above: small
+      spacing_below: small
+      italic: false
+      background: ''
+      bold: false
+      underline: false
+      include_placeholder: true
+    name: drop_down_1
+    layout_properties: {grid_position: 'UCVBGL,YJYZOZ'}
+is_package: true
