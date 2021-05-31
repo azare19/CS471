@@ -5,122 +5,100 @@ container:
     wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '{}',
     spacing_below: small, background: ''}
 components:
-- type: ColumnPanel
-  properties: {col_widths: '{}'}
-  name: column_panel_1
-  layout_properties: {grid_position: 'IZMOQZ,HRDBYS'}
-  components:
-  - type: Label
-    properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
-      visible: true, text: Full Name, font_size: null, font: '', spacing_above: small,
-      icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
-      underline: false, icon: ''}
-    name: full_name_lbl
-    layout_properties: {grid_position: 'YPYXAD,KPKFOM'}
-    event_bindings: {}
-  - type: TextBox
-    properties: {role: null, align: left, hide_text: false, tooltip: '', placeholder: Firstname Lastname,
-      border: '', enabled: true, foreground: '', visible: true, text: '', font_size: null,
-      font: '', spacing_above: small, type: text, spacing_below: small, italic: false,
-      background: '', bold: false, underline: false}
-    name: full_name_txtbx
-    layout_properties: {grid_position: 'YPYXAD,MDDUTU'}
-    event_bindings: {}
-- type: ColumnPanel
-  properties: {col_widths: '{}'}
-  name: column_panel_2
-  layout_properties: {grid_position: 'UMELUL,CDIWHO'}
-  components:
-  - type: Label
-    properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
-      visible: true, text: Email, font_size: null, font: '', spacing_above: small,
-      icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
-      underline: false, icon: ''}
-    name: email_lbl
-    layout_properties: {grid_position: 'TCYFQM,SRNPVV'}
-  - type: TextBox
-    properties: {role: null, align: left, hide_text: false, tooltip: '', placeholder: Email,
-      border: '', enabled: true, foreground: '', visible: true, text: '', font_size: null,
-      font: '', spacing_above: small, type: text, spacing_below: small, italic: false,
-      background: '', bold: false, underline: false}
-    name: email_txtbx
-    layout_properties: {grid_position: 'TCYFQM,GZQZVM'}
-- type: ColumnPanel
-  properties: {col_widths: '{}'}
-  name: column_panel_3
-  layout_properties: {grid_position: 'XXBQMP,YGKMDR'}
-  components:
-  - type: Label
-    properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
-      visible: true, text: Password, font_size: null, font: '', spacing_above: small,
-      icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
-      underline: false, icon: ''}
-    name: password_lbl
-    layout_properties: {grid_position: 'DZJCYQ,ZEFEPJ'}
-  - type: TextBox
-    properties: {role: null, align: left, hide_text: true, tooltip: '', placeholder: Password,
-      border: '', enabled: true, foreground: '', visible: true, text: '', font_size: null,
-      font: '', spacing_above: small, type: text, spacing_below: small, italic: false,
-      background: '', bold: false, underline: false}
-    name: password_txtbx
-    layout_properties: {grid_position: 'DZJCYQ,IRCCUC'}
-- type: ColumnPanel
-  properties: {col_widths: '{}'}
-  name: column_panel_4
-  layout_properties: {grid_position: 'XLLXMY,KXBLAK'}
-  components:
-  - type: Label
-    properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
-      visible: true, text: Re-enter Password, font_size: null, font: '', spacing_above: small,
-      icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
-      underline: false, icon: ''}
-    name: repeat_password_lbl
-    layout_properties: {grid_position: 'QQZPYC,OBHILK'}
-  - type: TextBox
-    properties: {role: null, align: left, hide_text: false, tooltip: '', placeholder: Repeat password,
-      border: '', enabled: true, foreground: '', visible: true, text: '', font_size: null,
-      font: '', spacing_above: small, type: text, spacing_below: small, italic: false,
-      background: '', bold: false, underline: false}
-    name: repeat_password_txtbx
-    layout_properties: {grid_position: 'QQZPYC,NQZNGH'}
-- type: ColumnPanel
-  properties: {col_widths: '{}'}
-  name: column_panel_5
-  layout_properties: {grid_position: 'HLIPBH,BUEQIM'}
-  components:
-  - type: Label
-    properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
-      visible: true, text: Account Type, font_size: null, font: '', spacing_above: small,
-      icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
-      underline: false, icon: ''}
-    name: account_type_lbl
-    layout_properties: {grid_position: 'UCVBGL,HEVYBI'}
-  - type: DropDown
-    properties:
-      role: null
-      align: full
-      tooltip: ''
-      placeholder: Select Account Type
-      border: ''
-      enabled: true
-      foreground: ''
-      items: [Student, Registrar, Loan Officer]
-      visible: true
-      font_size: null
-      font: ''
-      spacing_above: small
-      spacing_below: small
-      italic: false
-      background: ''
-      bold: false
-      underline: false
-      include_placeholder: true
-    name: account_type_dd
-    layout_properties: {grid_position: 'UCVBGL,YJYZOZ'}
-- type: RichText
-  properties: {role: null, align: left, tooltip: '', enable_slots: true, border: '',
-    foreground: '#FF0000', visible: true, font_size: null, content: '', font: '',
-    spacing_above: small, spacing_below: small, data: null, background: '', format: markdown}
-  name: message_bx
-  layout_properties: {grid_position: 'CJSZPT,NRXLZE'}
+- type: Label
+  properties: {role: null, align: left, tooltip: '', border: '', foreground: '', visible: true,
+    text: Full Name, font_size: null, font: '', spacing_above: small, icon_align: left,
+    spacing_below: small, italic: false, background: '', bold: false, underline: false,
+    icon: ''}
+  name: full_name_lbl
+  layout_properties: {grid_position: 'VYMDJA,FEJIJI'}
+  event_bindings: {}
+- type: TextBox
+  properties: {role: null, align: left, hide_text: false, tooltip: '', placeholder: Firstname Lastname,
+    border: '', enabled: true, foreground: '', visible: true, text: '', font_size: null,
+    font: '', spacing_above: small, type: text, spacing_below: small, italic: false,
+    background: '', bold: false, underline: false}
+  name: full_name_txtbx
+  layout_properties: {grid_position: 'VYMDJA,THDXBB'}
+  event_bindings: {}
+- type: Label
+  properties: {role: null, align: left, tooltip: '', border: '', foreground: '', visible: true,
+    text: Email, font_size: null, font: '', spacing_above: small, icon_align: left,
+    spacing_below: small, italic: false, background: '', bold: false, underline: false,
+    icon: ''}
+  name: email_lbl
+  layout_properties: {grid_position: 'HTOLWV,LQYEEW'}
+- type: TextBox
+  properties: {role: null, align: left, hide_text: false, tooltip: '', placeholder: Email,
+    border: '', enabled: true, foreground: '', visible: true, text: '', font_size: null,
+    font: '', spacing_above: small, type: text, spacing_below: small, italic: false,
+    background: '', bold: false, underline: false}
+  name: email_txtbx
+  layout_properties: {grid_position: 'HTOLWV,NOPJAP'}
+- type: Label
+  properties: {role: null, align: left, tooltip: '', border: '', foreground: '', visible: true,
+    text: Password, font_size: null, font: '', spacing_above: small, icon_align: left,
+    spacing_below: small, italic: false, background: '', bold: false, underline: false,
+    icon: ''}
+  name: password_lbl
+  layout_properties: {grid_position: 'KHNLUP,OWVHOA'}
+- type: TextBox
+  properties: {role: null, align: left, hide_text: true, tooltip: '', placeholder: Password,
+    border: '', enabled: true, foreground: '', visible: true, text: '', font_size: null,
+    font: '', spacing_above: small, type: text, spacing_below: small, italic: false,
+    background: '', bold: false, underline: false}
+  name: password_txtbx
+  layout_properties: {grid_position: 'KHNLUP,NWJEZY'}
+- type: Label
+  properties: {role: null, align: left, tooltip: '', border: '', foreground: '', visible: true,
+    text: Re-enter Password, font_size: null, font: '', spacing_above: small, icon_align: left,
+    spacing_below: small, italic: false, background: '', bold: false, underline: false,
+    icon: ''}
+  name: repeat_password_lbl
+  layout_properties: {grid_position: 'TIQWYZ,FPWDWK'}
+- type: TextBox
+  properties: {role: null, align: left, hide_text: true, tooltip: '', placeholder: Repeat password,
+    border: '', enabled: true, foreground: '', visible: true, text: '', font_size: null,
+    font: '', spacing_above: small, type: text, spacing_below: small, italic: false,
+    background: '', bold: false, underline: false}
+  name: repeat_password_txtbx
+  layout_properties: {grid_position: 'TIQWYZ,GHBEIW'}
+  event_bindings: {}
+- type: Label
+  properties: {role: null, align: left, tooltip: '', border: '', foreground: '', visible: true,
+    text: Account Type, font_size: null, font: '', spacing_above: small, icon_align: left,
+    spacing_below: small, italic: false, background: '', bold: false, underline: false,
+    icon: ''}
+  name: account_type_lbl
+  layout_properties: {grid_position: 'HLIPBH,BGEPGD'}
+- type: DropDown
+  properties:
+    role: null
+    align: full
+    tooltip: ''
+    placeholder: Select Account Type
+    border: ''
+    enabled: true
+    foreground: ''
+    items: [Student, Registrar, Loan Officer]
+    visible: true
+    font_size: null
+    font: ''
+    spacing_above: small
+    spacing_below: small
+    italic: false
+    background: ''
+    bold: false
+    underline: false
+    include_placeholder: true
+  name: account_type_dd
+  layout_properties: {grid_position: 'HLIPBH,DSBFTY'}
+- type: Label
+  properties: {role: null, align: left, tooltip: '', border: '', foreground: '#FF0000',
+    visible: false, text: '', font_size: null, font: '', spacing_above: small, icon_align: left,
+    spacing_below: small, italic: false, background: '', bold: false, underline: false,
+    icon: ''}
+  name: message_lbl
+  layout_properties: {grid_position: 'QQZZEW,ERMNGE'}
+  event_bindings: {}
 is_package: true

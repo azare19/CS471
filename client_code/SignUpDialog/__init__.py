@@ -35,3 +35,6 @@ class SignUpDialog(SignUpDialogTemplate):
     """Set the message box text"""
     self.message_bx.text = text
   
+  def close_alert(self, **kws):
+     """Close any alert we might be in with 'login' value."""
+     self.raise_event('x-close-alert', value=True)

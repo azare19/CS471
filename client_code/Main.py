@@ -1,8 +1,11 @@
+from anvil import *
 import anvil.server
 import anvil.users
 import anvil.tables as tables
 import anvil.tables.query as q
 from anvil.tables import app_tables
+from anvil import open_form
+from .PasswordResetDialog import PasswordResetDialog
 
 def do_email_confirm_or_reset():
   """Check whether the user has arrived from an email-confirmation link or a password reset, and pop up any necessary dialogs.
@@ -19,16 +22,14 @@ def do_email_confirm_or_reset():
         pwr = PasswordResetDialog()
         if not alert(pwr, title="Reset Your Password", buttons=[("Reset password", True, 'primary'), ("Cancel", False)]):
           return
-        if pwr.pw_box.text != pwr.pw_repeat_box.text:
-          alert("Passwords did not match. Try again.")
-        else:
+        resp = anvil.server.call('_perform_password_reset', h['email'], h['pwreset'], pwr.pw_box.text, pwr.pw_repeat_box.text)
+        if resp == 0:
+          alert("Your password has been reset. You are now logged in.")
           break
-  
-      if anvil.server.call('_perform_password_reset', h['email'], h['pwreset'], pwr.pw_box.text):
-        alert("Your password has been reset. You are now logged in.")
-      else:
-        alert("This is not a valid password reset link")
-
+        elif resp == -1:
+          alert("This is not a valid password reset link")
+        elif resp == -2:
+          alert("Passwords did not match. Try again.")
         
     elif 'confirm' in h:
       if anvil.server.call('_confirm_email_address', h['email'], h['confirm']):
@@ -39,4 +40,4 @@ def do_email_confirm_or_reset():
 
 
 do_email_confirm_or_reset()
-open_form('welcome_page')
+open_form('WelcomePage')

@@ -73,7 +73,7 @@ def _do_signup(email, name, password, repeat_password, account_type):
         return -1
     elif not re.match(r"^[A-Za-z0-9\.\+_-]+@[A-Za-z0-9\._-]+\.[a-zA-Z]+$", email):
         return -2
-    elif len(password) == 0:
+    elif len(password) < 7 or not password.isalnum():
         return -3
     elif password != repeat_password:
         return -4
@@ -86,6 +86,7 @@ def _do_signup(email, name, password, repeat_password, account_type):
         user = app_tables.users.add_row(name=name.title(),
                                         email=email.lower(),
                                         confirmed_email=False,
+                                        enabled=True,
                                         password_hash=pwhash,
                                         user_type=account_type)
         _send_email_confirm_link(email)
@@ -111,14 +112,17 @@ def _is_password_key_correct(email, link_key):
 
 
 @anvil.server.callable
-def _perform_password_reset(email, reset_key, new_password):
+def _perform_password_reset(email, reset_key, new_password, repeat_password):
     """Perform a password reset if the key matches; return True if it did."""
+    if new_password != repeat_password:
+      return -2
     user = get_user_if_key_correct(email, reset_key)
     if user is not None:
         user['password_hash'] = hash_password(new_password, bcrypt.gensalt())
         user['link_key'] = None
         anvil.users.force_login(user)
-        return True
+        return 0
+    return -1
 
 
 @anvil.server.callable
