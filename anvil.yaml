@@ -17,7 +17,7 @@ package_name: Student_Loan_System
 allow_embedding: false
 name: Student Loan System
 runtime_options: {version: 2, client_version: '3', server_version: python3-sandbox}
-metadata: {}
+metadata: {logo_img: 'asset:doge.png'}
 native_deps: {head_html: ''}
 db_schema:
 - name: Users
