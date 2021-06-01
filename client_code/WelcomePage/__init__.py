@@ -35,6 +35,8 @@ class WelcomePage(WelcomePageTemplate):
       self.message_lbl.visible = True
     else:
       self.message_lbl.visible = False
+    
+    print(anvil.users.get_user())
 
 
 
