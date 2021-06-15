@@ -12,7 +12,7 @@ services:
   server_config: {custom_smtp: true, smtp_encryption: '', smtp_host: smtp.mailgun.org,
     smtp_port: 587, smtp_user: postmaster@sandbox5bb113f9fab74712a65a6602fe17a307.mailgun.org,
     smtp_password: xzneN+iFFbmhALEZlZTkWki/389EB2raZkIZ7MUG7uPomClH+yl3q86+gD/KjRo1rwqu7CO09gHSPHlHxPuAQvou4OKVxjNGngcXZb/Mc8l6xr3RG/05YF6utbb4LSD8cwR7pElbos0q2UxYoDgrzLjWZzdaDCcZVfQuGtKtADz0fat6mjADvGctewNIQQEzuPJKufoXvpqdNz7wRPKc4fVcLG4DgelLJXIu}
-startup: {type: form, module: BankHomePage}
+startup: {type: form, module: StudentHomePage}
 package_name: Student_Loan_System
 allow_embedding: false
 name: Student Loan System

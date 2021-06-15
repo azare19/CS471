@@ -51,6 +51,7 @@ components:
       icon: 'fa:file-text'}
     name: loan_application_form_link
     layout_properties: {grid_position: 'OICZLD,KMMLBU'}
+    event_bindings: {}
   - type: Link
     properties: {role: null, url: '', align: left, tooltip: '', border: '', foreground: '',
       visible: true, text: Application(s) Status, font_size: null, wrap_on: mobile,
@@ -61,9 +62,36 @@ components:
     layout_properties: {grid_position: 'VTQPKK,SAUWIQ'}
   - type: Link
     properties: {role: null, url: '', align: left, tooltip: '', border: '', foreground: '',
-      visible: true, text: Support Checks, font_size: null, wrap_on: mobile, font: '',
-      col_spacing: medium, spacing_above: small, icon_align: left, col_widths: '',
+      visible: true, text: Monthly Support Checks Form, font_size: null, wrap_on: mobile,
+      font: '', col_spacing: medium, spacing_above: small, icon_align: left, col_widths: '',
+      spacing_below: small, italic: false, background: '', bold: false, underline: false,
+      icon: 'fa:file-text'}
+    name: support_checks_form_link
+    layout_properties:
+      col_widths: {}
+      grid_position: MQGPDR,VAUXHV
+  - type: Link
+    properties: {role: null, url: '', align: left, tooltip: '', border: '', foreground: '',
+      visible: true, text: Monthly Support Checks, font_size: null, wrap_on: mobile,
+      font: '', col_spacing: medium, spacing_above: small, icon_align: left, col_widths: '',
       spacing_below: small, italic: false, background: '', bold: false, underline: false,
       icon: 'fa:money'}
     name: monthy_checks_link
     layout_properties: {grid_position: 'AHFQEU,DKHRFM'}
+    event_bindings: {}
+  - type: Link
+    properties: {role: null, url: '', align: left, tooltip: '', border: '', foreground: '',
+      visible: true, text: Payment Calculator, font_size: null, wrap_on: mobile, font: '',
+      col_spacing: medium, spacing_above: small, icon_align: left, col_widths: '',
+      spacing_below: small, italic: false, background: '', bold: false, underline: false,
+      icon: 'fa:calculator'}
+    name: loan_calculator_link
+    layout_properties: {grid_position: 'MMIJHM,KQMLUX'}
+  - type: Link
+    properties: {role: null, url: '', align: left, tooltip: '', border: '', foreground: '',
+      visible: true, text: Settings, font_size: null, wrap_on: mobile, font: '', col_spacing: medium,
+      spacing_above: small, icon_align: left, col_widths: '', spacing_below: small,
+      italic: false, background: '', bold: false, underline: false, icon: 'fa:sliders'}
+    name: settings_link
+    layout_properties: {grid_position: 'VGESCR,DGFVQW'}
+  event_bindings: {}
