@@ -45,7 +45,7 @@ def mortgageCalculator( interest, years, payments_year, loan):
 
     print(df)
 
-def riskCalculator( age, annual_income, housing, savings, credit_score):
+def riskCalculator( age, annual_income, housing, savings):
     if age < 18 or age > 70:
         age_risk = 5
     elif age >= 18 & age < 25:
@@ -77,6 +77,10 @@ def riskCalculator( age, annual_income, housing, savings, credit_score):
         savings_risk = 5
     elif savings >= 10000 & savings < 20000:
         savings_risk = 4
+    else:
+        savings_risk = 2
+
+    risk = savings_risk + housing_risk + income_risk + age_risk
 
 
 
