@@ -35,8 +35,15 @@ class WelcomePage(WelcomePageTemplate):
       self.message_lbl.visible = True
     else:
       self.message_lbl.visible = False
+      user_role_str = anvil.users.get_user()['user_type']
+      if user_role_str == 'Student':
+        open_form('StudentHomePage')
+      elif user_role_str == 'Registrar':
+        open_form('RegistrarHomePage')
+      else:
+        open_form('BankHomePage')
     
-    print(anvil.users.get_user()['email'])
+    
 
 
 

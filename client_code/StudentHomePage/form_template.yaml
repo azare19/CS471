@@ -79,6 +79,7 @@ components:
       icon: 'fa:calculator'}
     name: loan_calculator_link
     layout_properties: {grid_position: 'MMIJHM,KQMLUX'}
+    event_bindings: {click: loan_calculator_link_click}
   - type: Link
     properties: {role: null, url: '', align: left, tooltip: '', border: '', foreground: '',
       visible: true, text: Settings, font_size: null, wrap_on: mobile, font: '', col_spacing: medium,
@@ -99,19 +100,6 @@ components:
     icon: ''}
   name: page_title_label
   layout_properties: {slot: title}
-- type: LinearPanel
-  properties: {}
-  name: linear_panel_1
-  layout_properties: {slot: default}
-  components:
-  - type: Label
-    properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
-      visible: true, text: Homepage, font_size: 18, font: '', spacing_above: small,
-      icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
-      underline: false, icon: ''}
-    name: homepage_label
-    layout_properties: {grid_position: 'AGIJFL,WQDQVA', row: DYMFBL, width_xs: 12,
-      col_xs: 0}
 - type: FlowPanel
   properties: {role: null, spacing: none, align: left, tooltip: '', border: '', foreground: '',
     visible: true, spacing_above: none, spacing_below: none, background: ''}
@@ -132,3 +120,153 @@ components:
       underline: false, icon: ''}
     name: username_label
     layout_properties: {}
+    event_bindings: {}
+- type: LinearPanel
+  properties: {}
+  name: linear_panel_1
+  layout_properties: {slot: default}
+  components:
+  - type: ColumnPanel
+    properties: {col_widths: '{}'}
+    name: column_panel_1
+    layout_properties: {}
+    components:
+    - type: ColumnPanel
+      properties: {role: card, col_widths: '{}'}
+      name: card_3
+      layout_properties: {row: SLRADI, width_xs: 12, col_xs: 0, grid_position: 'HDRAIE,MEECDJ'}
+      components:
+      - type: Label
+        properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
+          visible: true, text: Action Required, font_size: null, font: '', spacing_above: small,
+          icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
+          underline: false, icon: ''}
+        name: action_label
+        layout_properties: {grid_position: 'VAHOLK,SVUIXE'}
+      - type: GridPanel
+        properties: {}
+        name: grid_panel_2
+        layout_properties: {grid_position: 'HUGOWY,VAATXM'}
+        components:
+        - type: DropDown
+          properties:
+            role: null
+            align: full
+            tooltip: ''
+            placeholder: All Types
+            border: ''
+            enabled: true
+            foreground: ''
+            items: []
+            visible: true
+            font_size: null
+            font: ''
+            spacing_above: small
+            spacing_below: small
+            italic: false
+            background: ''
+            bold: false
+            underline: false
+            include_placeholder: true
+          name: action_type_dropdown
+          layout_properties: {row: GGLQXA, width_xs: 6, col_xs: 0, width: 202.828}
+        - type: DropDown
+          properties:
+            role: null
+            align: full
+            tooltip: ''
+            placeholder: Next Two Weeks
+            border: ''
+            enabled: true
+            foreground: ''
+            items: []
+            visible: true
+            font_size: null
+            font: ''
+            spacing_above: small
+            spacing_below: small
+            italic: false
+            background: ''
+            bold: false
+            underline: false
+            include_placeholder: true
+          name: due_range_dropdown
+          layout_properties: {row: GGLQXA, width_xs: 6, col_xs: 6, width: 202.828}
+      - type: RepeatingPanel
+        properties: {item_template: null}
+        name: repeating_panel_1
+        layout_properties: {grid_position: 'TRWFDD,MVOGQF'}
+      - type: Spacer
+        properties: {height: 176}
+        name: spacer_1
+        layout_properties: {grid_position: 'CUJNZN,DRYHCX'}
+    - type: ColumnPanel
+      properties: {role: card, col_widths: '{}'}
+      name: card_1_copy
+      layout_properties: {row: FXMAUH, width_xs: 12, col_xs: 0, grid_position: 'HDRAIE,RLUOME
+          MCADDC,WRMSFN'}
+      components:
+      - type: Label
+        properties: {role: null, align: center, tooltip: '', border: '', foreground: '',
+          visible: true, text: 'Loan Applied
+
+
+            500', font_size: null, font: '', spacing_above: small, icon_align: left,
+          spacing_below: small, italic: false, background: '', bold: true, underline: false,
+          icon: ''}
+        name: applied_loans_label
+        layout_properties: {grid_position: 'ZVWSXU,NOBBBA', row: ZUIMYC, width_xs: 4,
+          col_xs: 0}
+        event_bindings: {}
+      event_bindings: {}
+    - type: ColumnPanel
+      properties: {role: card, col_widths: '{}'}
+      name: card_2_copy
+      layout_properties: {row: VYKVLK, width_xs: 12, col_xs: 0, grid_position: 'HDRAIE,RLUOME
+          EBPCXO,NKPVXW'}
+      components:
+      - type: Label
+        properties: {role: null, align: center, tooltip: '', border: '', foreground: '',
+          visible: true, text: 'Accepted Loan Amount
+
+
+            $69,420', font_size: null, font: '', spacing_above: small, icon_align: left,
+          spacing_below: small, italic: false, background: '', bold: true, underline: false,
+          icon: ''}
+        name: total_accepted_amount_label
+        layout_properties: {grid_position: 'SIHONM,EVAYXZ', full_width_row: false}
+    - type: ColumnPanel
+      properties: {role: card, col_widths: '{}'}
+      name: card_2
+      layout_properties: {row: VDNQNV, width_xs: 12, col_xs: 0, grid_position: 'HDRAIE,RLUOME
+          MSSBYC,JRJAFF'}
+      components:
+      - type: Label
+        properties: {role: null, align: center, tooltip: '', border: '', foreground: '',
+          visible: true, text: 'Monthly Checks
+
+
+            0', font_size: null, font: '', spacing_above: small, icon_align: left,
+          spacing_below: small, italic: false, background: '', bold: true, underline: false,
+          icon: ''}
+        name: monthly_checks_label
+        layout_properties: {grid_position: 'PTGKTZ,QBJTHK'}
+    - type: ColumnPanel
+      properties: {role: card, col_widths: '{}'}
+      name: card_1
+      layout_properties: {grid_position: 'RSHGIS,NMTNCH'}
+      components:
+      - type: Button
+        properties: {role: null, align: center, tooltip: '', border: '', enabled: true,
+          foreground: '', visible: true, text: Apply for Loan, font_size: null, font: '',
+          spacing_above: small, icon_align: left, spacing_below: small, italic: false,
+          background: '', bold: false, underline: false, icon: ''}
+        name: apply_for_loan_btn
+        layout_properties: {grid_position: 'ARMQWG,PIALXA'}
+      - type: Button
+        properties: {role: null, align: center, tooltip: '', border: '', enabled: true,
+          foreground: '', visible: true, text: Apply for Monthly Checks, font_size: null,
+          font: '', spacing_above: small, icon_align: left, spacing_below: small,
+          italic: false, background: '', bold: false, underline: false, icon: ''}
+        name: apply_for_monthly_checks_btn
+        layout_properties: {grid_position: 'ARMQWG,CFZBBT'}

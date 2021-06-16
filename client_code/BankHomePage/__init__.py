@@ -22,4 +22,9 @@ class BankHomePage(BankHomePageTemplate):
     """This method is called when the link is clicked"""
     pass
 
+  def new_loan_application_link_copy_click(self, **event_args):
+    """This method is called when the link is clicked"""
+    pass
+
+
 
